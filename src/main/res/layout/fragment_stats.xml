@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="독서 취향 분석"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:textColor="@android:color/black"/>
+
+        <!-- 방사형 차트 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="12dp">
+
+            <com.example.project.RadarChartView
+                android:id="@+id/chart_radar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 독서량 요약 (총 권수 + 월별) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:text="나의 독서 기록"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/design_default_color_primary"/>
+
+                <!-- [추가됨] 년도 선택 버튼 -->
+                <Button
+                    android:id="@+id/btn_select_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="년도 선택"
+                    android:textSize="12sp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:backgroundTint="#EEEEEE"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_total_count"
+                android:text="총 읽은 책: 0권"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:text="월별 독서량"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- 월별 통계가 들어갈 텍스트뷰 -->
+            <TextView
+                android:id="@+id/tv_monthly_stats"
+                android:text="데이터 없음"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="#555555"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- 카테고리별 통계 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:text="카테고리별 읽은 권수"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView android:id="@+id/tv_stat_cat1" android:text="• 문학 / 소설: 0권" android:textSize="14sp" android:padding="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tv_stat_cat2" android:text="• 인문 / 사회 / 철학: 0권" android:textSize="14sp" android:padding="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tv_stat_cat3" android:text="• 경제 / 경영: 0권" android:textSize="14sp" android:padding="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tv_stat_cat4" android:text="• 과학 / 기술: 0권" android:textSize="14sp" android:padding="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tv_stat_cat5" android:text="• 실용 / 라이프스타일: 0권" android:textSize="14sp" android:padding="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tv_stat_cat6" android:text="• 기타: 0권" android:textSize="14sp" android:padding="4dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

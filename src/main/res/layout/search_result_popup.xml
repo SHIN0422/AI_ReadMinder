@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:minWidth="300dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="책 정보 확인"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:id="@+id/dialog_cover"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/dialog_book_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="책 제목"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/design_default_color_primary"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/dialog_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="저자 이름"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 줄거리 섹션 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="줄거리"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/dialog_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="줄거리 정보가 없습니다."
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:textSize="13sp"
+            android:lineSpacingExtra="4dp"
+            android:maxLines="3"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/dialog_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="더보기 ▼"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_gravity="end"
+            android:padding="4dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"/>
+
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 입력 섹션 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카테고리 선택"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내 별점"
+            android:textStyle="bold"/>
+        <RatingBar
+            android:id="@+id/rating_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- [복구] 메모 입력창 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="한 줄 메모"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/et_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="감상평을 남겨주세요"
+            android:minHeight="80dp"
+            android:gravity="top"
+            android:background="@android:drawable/editbox_background"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+</ScrollView>
