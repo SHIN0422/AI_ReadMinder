@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <!-- 책 표지 -->
+    <ImageView
+        android:id="@+id/detail_cover"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="책 제목"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- 저자 -->
+    <TextView
+        android:id="@+id/detail_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="저자"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- 정보 박스 (카테고리, 별점) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/detail_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카테고리: 소설"
+            android:textSize="14sp"/>
+
+        <RatingBar
+            android:id="@+id/rating_detail"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:isIndicator="true"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- 리뷰 내용 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나의 메모"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/detail_review"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="작성된 메모가 없습니다."
+        android:background="#F9F9F9"
+        android:padding="12dp"
+        android:textSize="16sp"/>
+
+    <!-- 삭제 버튼 -->
+    <Button
+        android:id="@+id/btn_delete_book"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="이 책 삭제하기"
+        android:backgroundTint="#FF5252"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

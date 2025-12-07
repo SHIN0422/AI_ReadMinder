@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- 프로필 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_primary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/sym_def_app_icon"
+            android:background="@drawable/circular_progress_bar"
+            android:padding="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="신종현 님"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="컴퓨터공학과 | 202101772"
+            android:textColor="#DDDDDD"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- 메뉴 리스트 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 1. 찜한 도서 -->
+        <Button
+            android:id="@+id/btn_wishlist"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="찜한 도서 목록"
+            android:textAlignment="viewStart"
+            android:drawableStart="@android:drawable/btn_star"
+            android:drawablePadding="10dp"
+            android:paddingStart="20dp"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 2. AI 취향 분석 추천 (읽은 책 기반) -->
+        <Button
+            android:id="@+id/btn_ai_history"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="내 취향 분석 추천 (읽은 책 기반)"
+            android:textAlignment="viewStart"
+            android:drawableStart="@android:drawable/ic_menu_agenda"
+            android:drawablePadding="10dp"
+            android:paddingStart="20dp"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 3. [NEW] AI 키워드 추천 (새로운 발견) -->
+        <Button
+            android:id="@+id/btn_ai_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="키워드로 새 책 발견 (기분/장르)"
+            android:textAlignment="viewStart"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="10dp"
+            android:paddingStart="20dp"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+</LinearLayout>

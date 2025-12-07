@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="지난 챌린지 기록"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="20dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:textColor="@android:color/black"/>
+
+    <ListView
+        android:id="@+id/list_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:dividerHeight="10dp"
+        android:divider="@android:color/transparent"/>
+
+    <!-- 기록이 없을 때 보여줄 텍스트 -->
+    <TextView
+        android:id="@+id/tv_no_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="보관된 기록이 없습니다."
+        android:gravity="center"
+        android:visibility="gone"/>
+
+</LinearLayout>

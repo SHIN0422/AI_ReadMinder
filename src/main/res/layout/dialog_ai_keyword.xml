@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:minWidth="300dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AI 도서 추천"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="아직 읽은 책 기록이 없네요!\n어떤 책을 추천해 드릴까요?"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/et_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="예) 힐링되는 소설, 가볍게 읽기 좋은 에세이, 스릴 넘치는 추리물"
+        android:background="@android:drawable/editbox_background"
+        android:padding="12dp"
+        android:minHeight="50dp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- 추천받기 버튼 -->
+    <Button
+        android:id="@+id/btn_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="추천받기"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>
